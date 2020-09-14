@@ -31,9 +31,9 @@ const mainPrompts = ()=>{
             value: "addEmployee"
         },
         {
-            name: "Update employee.",
+            name: "Update employee roles.",
             value: "updateEmployee"
-        }
+        },
       ]
     }
   ]).then(res=> {
