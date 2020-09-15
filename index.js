@@ -1,5 +1,6 @@
 const {prompt} = require("inquirer");
 const db = require ("./database");
+require("dotenv").config();
 
 const mainPrompts = ()=>{
   prompt([
