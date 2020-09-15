@@ -1,4 +1,6 @@
 const {prompt} = require("inquirer");
+const db = require ("./database");
+
 const mainPrompts = ()=>{
   prompt([
     {
@@ -41,6 +43,18 @@ const mainPrompts = ()=>{
       case "viewDepartments":
         viewDepartments();
         break;
+      case "viewEmployees":
+          viewEmployees();
+          break;
     }
   })
 }
+function viewEmployees(){
+  db.findAllEmployees().then(([rows])=>{
+    console.table(rows)
+
+  }).then(()=>mainPrompts())
+}
+
+
+mainPrompts()
